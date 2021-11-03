@@ -20,9 +20,9 @@
 
 # Links
 ## Heroku links
-main branch server: [main branch]()
+main branch server: [main branch](https://api-server0.herokuapp.com/)
 
 ***
 
 # Pull requests
-dev to main pull request: [pull request]()
+dev to main pull request: [pull request](https://github.com/EmadIdris/api-server/pull/1)
