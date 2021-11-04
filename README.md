@@ -17,6 +17,9 @@
 ![](https://github.com/LTUC/amman-javascript-401d13/blob/main/class-04/assets/rdb.png?raw=true)
 ![](https://github.com/LTUC/amman-javascript-401d13/blob/main/class-04/assets/nosql.png?raw=true)
 
+# UML
+![](./Lab3.png)
+
 
 # Links
 ## Heroku links
