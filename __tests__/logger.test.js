@@ -1,33 +1,34 @@
-'use strict'
+'use strict';
+//----------------------------------------------------------------------------
 
-const loggerMiddleWare = require('../src/middleware/logger')
+const loggerMiddleware = require('../src/middleware/logger');
+//----------------------------------------------------------------------------
 
-describe('LOgger Middleware',()=>{
+describe('logger test', () => {
     let consoleSpy;
-let req={}
-let res={}
-let next = jest.fn()
+    let req = {};
+    let res = {};
+    let next = jest.fn();
+//----------------------------------------------------------------------------
 
-beforeEach(()=>{
+    beforeEach(() => {
+        consoleSpy = jest.spyOn(console, 'log').mockImplementation();
+    });
+//----------------------------------------------------------------------------
 
+    afterEach(() => {
+        consoleSpy.mockRestore();
+    });
+//----------------------------------------------------------------------------
 
-    consoleSpy = jest.spyOn(console,'log').mockImplementation();
-})
+    test('Check if the console is logging the outputs', async () => {
+        loggerMiddleware(req, res, next);
+        expect(consoleSpy).toHaveBeenCalled();
+    });
+//----------------------------------------------------------------------------
 
-afterEach(()=>{
-
-consoleSpy.mockRestore();
-})
-
-test('properly logs some output',()=>{
-loggerMiddleWare(req,res,next)
-expect(consoleSpy).toHaveBeenCalled()
-})
-
-test('check if properly moved to the next middleware',()=>{
-    loggerMiddleWare(req,res,next)
-    expect(next).toHaveBeenCalled()  
-})
-
-
+    test('Check if the code is properly moving to the next middleware', async() => {
+        loggerMiddleware(req, res, next);
+        expect(next).toHaveBeenCalled();
+    });
 })
