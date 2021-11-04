@@ -21,11 +21,8 @@
 ![UML**](./Lab3.png)
 
 
-# Links
-## Heroku links
-main branch server: [main branch](https://api-server0.herokuapp.com/)
+# [Heroku](https://api-server0.herokuapp.com/)
 
 ***
 
-# Pull requests
-dev to main pull request: [pull request](https://github.com/EmadIdris/api-server/pull/1)
+# [pull request](https://github.com/EmadIdris/api-server/pull/3)
